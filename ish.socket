@@ -1,0 +1,8 @@
+[Unit]
+Description=Ish socket
+
+[Socket]
+ListenStream=/run/ish.sock
+
+[Install]
+WantedBy=sockets.target
