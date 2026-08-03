@@ -1,0 +1,31 @@
+{
+	"MAD_RESULT_PATH": "/Volumes/dlt/databricks_ps/scratch/mad_result",
+	"REPORT_PATH": "/Volumes/dlt/databricks_ps/scratch/report",
+	"THRESHOLD_ONE_DAY": 50,
+	"DAY_RANGE_ONE_DAY": 1,
+	"NR": {
+		"CELL": { "THRESHOLD": 10, "DAY_RANGE": 2, "CRITICAL": true },
+		"CELL_VONR": { "THRESHOLD": 10, "DAY_RANGE": 2, "CRITICAL": true },
+		"CELL_COMPLEX": { "THRESHOLD": 10, "DAY_RANGE": 2, "CRITICAL": true },
+		"NG_DUCELL": { "THRESHOLD": 10, "DAY_RANGE": 2, "CRITICAL": true },
+		"NG": { "THRESHOLD": 10, "DAY_RANGE": 2, "CRITICAL": true },
+		"CELL_QCI": { "THRESHOLD": 10, "DAY_RANGE": 2, "CRITICAL": true },
+		"DU": { "THRESHOLD": 10, "DAY_RANGE": 2, "CRITICAL": true },
+		"GNB": { "THRESHOLD": 10, "DAY_RANGE": 2, "CRITICAL": true },
+		"GNB_QCI": { "THRESHOLD": 10, "DAY_RANGE": 2, "CRITICAL": true },
+		"SA": { "THRESHOLD": 10, "DAY_RANGE": 2, "CRITICAL": true },
+		"RFSP": { "THRESHOLD": 10, "DAY_RANGE": 2, "CRITICAL": true },
+		"REPORT_DUMP": "/Volumes/dlt/databricks_ps/scratch/report/ade_report_dumpNR/"
+	},
+	"LTE": {
+		"USM": { "THRESHOLD": 10, "DAY_RANGE": 2, "CRITICAL": true },
+		"ALPT": { "THRESHOLD": 10, "DAY_RANGE": 2, "CRITICAL": true },
+		"USM_EMTC_NBIOT": {
+			"THRESHOLD": 50,
+			"DAY_RANGE": 10,
+			"CRITICAL": false
+		},
+		"BAND": { "THRESHOLD": 20, "DAY_RANGE": 7, "CRITICAL": false },
+		"REPORT_DUMP": "/Volumes/dlt/databricks_ps/scratch/report/ade_report_dump/"
+	}
+}
