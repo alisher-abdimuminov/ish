@@ -8,22 +8,34 @@ class Application(models.Model):
     )
 
     rector_application = models.FileField(
-        upload_to="docs/rector/", verbose_name="Institut rektori nomiga ariza"
+        upload_to="docs/rector/",
+        verbose_name="Institut rektori nomiga ariza",
+        null=True,
+        blank=True,
     )
     passport = models.FileField(
         upload_to="docs/passport/",
         verbose_name="Pasport yoki ID-shaxs guvohnomasi nusxasi",
+        null=True,
+        blank=True,
     )
     diploma = models.FileField(
         upload_to="docs/diploma/",
         verbose_name="Oliy ma'lumot, ilmiy daraja to'g'risidagi diplomlar nusxasi",
+        null=True,
+        blank=True,
     )
     degree_diploma = models.FileField(
         upload_to="docs/degree/",
         verbose_name="Ilmiy unvoni to'g'risidagi diplomlar nusxasi",
+        null=True,
+        blank=True,
     )
     resume = models.FileField(
-        upload_to="docs/resume/", verbose_name="Rezyume-ma'lumotnoma"
+        upload_to="docs/resume/",
+        verbose_name="Rezyume-ma'lumotnoma",
+        null=True,
+        blank=True,
     )
 
     qualification_cert = models.FileField(
