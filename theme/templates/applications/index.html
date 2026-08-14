@@ -38,14 +38,14 @@
 
 				{{ form.rector_application }} {% if app_instance %}
 				<div class="mt-2">
-					{% if app_instance.rector_application_status == 'approved'
-					%}
+					<!-- prettier-ignore -->
+					{% if app_instance.rector_application_status == 'approved'%}
 					<p class="text-sm font-semibold text-green-700">
 						Qabul qilindi
 					</p>
 
-					{% elif app_instance.rector_application_status == 'rejected'
-					%}
+					<!-- prettier-ignore -->
+					{% elif app_instance.rector_application_status == 'rejected'%}
 					<p class="text-sm font-semibold text-red-700">Rad etildi</p>
 
 					{% if app_instance.rector_application_comment %}
@@ -178,14 +178,14 @@
 
 				{{ form.qualification_cert }} {% if app_instance %}
 				<div class="mt-2">
-					{% if app_instance.qualification_cert_status == 'approved'
-					%}
+					<!-- prettier-ignore -->
+					{% if app_instance.qualification_cert_status == 'approved'%}
 					<p class="text-sm font-semibold text-green-700">
 						Qabul qilindi
 					</p>
 
-					{% elif app_instance.qualification_cert_status == 'rejected'
-					%}
+					<!-- prettier-ignore -->
+					{% elif app_instance.qualification_cert_status == 'rejected'%}
 					<p class="text-sm font-semibold text-red-700">Rad etildi</p>
 
 					{% if app_instance.qualification_cert_comment %}
@@ -219,8 +219,8 @@
 						Qabul qilindi
 					</p>
 
-					{% elif app_instance.scientific_works_status == 'rejected'
-					%}
+					<!-- prettier-ignore -->
+					{% elif app_instance.scientific_works_status == 'rejected'%}
 					<p class="text-sm font-semibold text-red-700">Rad etildi</p>
 
 					{% if app_instance.scientific_works_comment %}
