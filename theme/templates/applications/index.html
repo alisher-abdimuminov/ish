@@ -15,7 +15,36 @@
 	>
 		{{ message }}
 	</div>
-	{% endfor %} {% endif %}
+	{% endfor %} {% endif %} {% if app_instance %}
+	<div class="mb-6">
+		<div
+			class="flex items-center justify-between p-4 rounded-xl border {% if app_instance.status == 'approved' %} bg-green-50 border-green-200 {% elif app_instance.status == 'rejected' %} bg-red-50 border-red-200 {% else %} bg-yellow-50 border-yellow-200 {% endif %}"
+		>
+			<div>
+				<p class="text-sm text-gray-500 mb-1">Ariza holati</p>
+
+				<p
+					class="font-semibold {% if app_instance.status == 'approved' %} text-green-700 {% elif app_instance.status == 'rejected' %} text-red-700 {% else %} text-yellow-700 {% endif %}"
+				>
+					{{ app_instance.get_status_display }}
+				</p>
+			</div>
+		</div>
+
+		{% if app_instance.status == 'rejected' and
+		app_instance.rejection_comment %}
+		<div class="mt-3 p-4 bg-red-50 border border-red-200 rounded-xl">
+			<p class="text-sm font-semibold text-red-700 mb-1">
+				Rad etish sababi
+			</p>
+
+			<p class="text-sm text-red-600">
+				{{ app_instance.rejection_comment }}
+			</p>
+		</div>
+		{% endif %}
+	</div>
+	{% endif %}
 
 	<form method="post" enctype="multipart/form-data" class="space-y-6">
 		{% csrf_token %}
