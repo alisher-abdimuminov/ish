@@ -3,6 +3,11 @@ from django.db import models
 
 
 class Application(models.Model):
+    class Status(models.TextChoices):
+        PENDING = "pending", "Kutilmoqda"
+        APPROVED = "approved", "Tasdiqlandi"
+        REJECTED = "rejected", "Rad etildi"
+
     user = models.OneToOneField(
         settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="application"
     )

@@ -5,4 +5,4 @@ from .models import Application
 
 @admin.register(Application)
 class ApplicationModelAdmin(admin.ModelAdmin):
-    list_display = ["user", "created_at"]
+    list_display = ["user", "status", "created_at"]
