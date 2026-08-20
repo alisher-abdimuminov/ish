@@ -11,4 +11,4 @@ class UserModelAdmin(UserAdmin, admin.ModelAdmin):
     list_display = ["phone", "first_name", "last_name"]
     add_form = UserCreationForm
     form = UserChangeForm
-    search_fields = ["phone", "full_name"]
+    search_fields = ["phone", "first_name", "last_name"]
