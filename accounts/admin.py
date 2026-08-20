@@ -10,6 +10,7 @@ class UserModelAdmin(UserAdmin, admin.ModelAdmin):
     list_display = ["phone", "first_name", "last_name"]
     add_form = UserCreationForm
     form = UserChangeForm
+    ordering = ["phone"]
     search_fields = ["phone", "first_name", "last_name"]
     fieldsets = (
         (
