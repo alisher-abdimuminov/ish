@@ -104,8 +104,7 @@
 			<!-- 3. Diploma -->
 			<div>
 				<label class="block text-sm font-medium text-gray-700 mb-1">
-					3. Oliy ma'lumot, ilmiy daraja to'g'risidagi diplomlarning
-					nusxalari
+					3. Oliy ma'lumot diplomi nusxasi
 				</label>
 
 				{{ form.diploma }} {% if app_instance %}
@@ -136,10 +135,44 @@
 				{% endif %}
 			</div>
 
-			<!-- 4. Degree diploma -->
+			<!-- 4. Diploma -->
 			<div>
 				<label class="block text-sm font-medium text-gray-700 mb-1">
-					4. Ilmiy unvoni to'g'risidagi diplomlarning nusxalari
+					4. Magistr dimplomi nusxasi
+				</label>
+
+				{{ form.m_diploma }} {% if app_instance %}
+				<div class="mt-2">
+					{% if app_instance.m_diploma_status == 'approved' %}
+					<p class="text-sm font-semibold text-green-700">
+						Qabul qilindi
+					</p>
+
+					{% elif app_instance.m_diploma_status == 'rejected' %}
+					<p class="text-sm font-semibold text-red-700">Rad etildi</p>
+
+					{% if app_instance.m_diploma_comment %}
+					<div
+						class="mt-2 p-3 bg-red-50 border border-red-200 rounded-lg"
+					>
+						<p class="text-sm text-red-700">
+							<span class="font-semibold">Sababi:</span>
+							{{ app_instance.m_diploma_comment }}
+						</p>
+					</div>
+					{% endif %} {% else %}
+					<p class="text-sm font-semibold text-orange-600">
+						Kutilmoqda
+					</p>
+					{% endif %}
+				</div>
+				{% endif %}
+			</div>
+
+			<!-- 5. Degree diploma -->
+			<div>
+				<label class="block text-sm font-medium text-gray-700 mb-1">
+					5. Ilmiy unvoni to'g'risidagi diplomlarning nusxalari
 				</label>
 
 				{{ form.degree_diploma }} {% if app_instance %}
@@ -170,10 +203,10 @@
 				{% endif %}
 			</div>
 
-			<!-- 5. Qualification certificate -->
+			<!-- 6. Qualification certificate -->
 			<div>
 				<label class="block text-sm font-medium text-gray-700 mb-1">
-					5. Malaka oshirganligi to'g'risidagi guvohnoma nusxasi
+					6. Malaka oshirganligi to'g'risidagi guvohnoma nusxasi
 				</label>
 
 				{{ form.qualification_cert }} {% if app_instance %}
@@ -206,10 +239,10 @@
 				{% endif %}
 			</div>
 
-			<!-- 6. Scientific works -->
+			<!-- 7. Scientific works -->
 			<div>
 				<label class="block text-sm font-medium text-gray-700 mb-1">
-					6. Ilmiy ishlar ro'yxati
+					7. Ilmiy ishlar ro'yxati
 				</label>
 
 				{{ form.scientific_works }} {% if app_instance %}
@@ -241,10 +274,10 @@
 				{% endif %}
 			</div>
 
-			<!-- 7. Language certificate -->
+			<!-- 8. Language certificate -->
 			<div>
 				<label class="block text-sm font-medium text-gray-700 mb-1">
-					7. Xorijiy tillarni bilish darajasini belgilovchi milliy va
+					8. Xorijiy tillarni bilish darajasini belgilovchi milliy va
 					xalqaro tan olingan sertifikatlar nusxasi (mavjud bo'lsa)
 				</label>
 
@@ -276,10 +309,10 @@
 				{% endif %}
 			</div>
 
-			<!-- 8. Resume -->
+			<!-- 9. Resume -->
 			<div>
 				<label class="block text-sm font-medium text-gray-700 mb-1">
-					8. Rezyume-ma'lumotnoma
+					9. Rezyume-ma'lumotnoma
 				</label>
 
 				{{ form.resume }} {% if app_instance %}
