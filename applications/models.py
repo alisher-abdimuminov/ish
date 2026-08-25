@@ -62,6 +62,22 @@ class Application(models.Model):
         blank=True,
     )
 
+    m_diploma = models.FileField(
+        upload_to="docs/m_diploma/",
+        verbose_name="Magistr to'g'risidagi diplomlar nusxasi",
+        null=True,
+        blank=True,
+    )
+    m_diploma_status = models.CharField(
+        max_length=20,
+        choices=Status.choices,
+        default=Status.PENDING,
+    )
+    m_diploma_comment = models.TextField(
+        null=True,
+        blank=True,
+    )
+
     degree_diploma = models.FileField(
         upload_to="docs/degree/",
         verbose_name="Ilmiy unvoni to'g'risidagi diplomlar nusxasi",

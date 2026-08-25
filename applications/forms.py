@@ -10,6 +10,7 @@ class ApplicationForm(forms.ModelForm):
             "rector_application",
             "passport",
             "diploma",
+            "m_diploma",
             "degree_diploma",
             "qualification_cert",
             "scientific_works",
